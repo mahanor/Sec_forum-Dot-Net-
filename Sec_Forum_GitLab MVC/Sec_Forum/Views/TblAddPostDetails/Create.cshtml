@@ -1,0 +1,155 @@
+﻿@model Sec_Forum.Models.TblAddPostDetail
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+ 
+
+    /* Add any additional styles you want for the input field here */
+    .form-control {
+        width: 400px;
+    }
+
+    .showimg {
+        border: 1px solid skyblue;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+</style>
+
+
+<br />
+@*<div class="row">
+    <div class=" col-md-8">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search by Project" aria-label="Search" aria-describedby="search-icon" id="searchInput" style="border-radius:0px">
+                <i class="fa fa-search"></i>
+            </div>
+        </form>
+    </div>
+
+<div class="col-md-4">
+    <form asp-action="Create" method="post" style="text-align:right">
+        <button class="btn btn-primary text-center">Add New <i class="fa fa-plus"></i></button>
+    </form>
+</div>
+</div>*@
+
+<br />
+<h4><a asp-action="Index" class="back-link" style="text-decoration:none; color:black"><i class="fa fa-chevron-left"></i>&nbsp My Shared Data  </a> &nbsp &nbsp <i class="fa fa-chevron-left"></i>&nbsp Add New Details</h4>
+<br />
+
+<div class="card" style="background-color:#F5F5F5;">
+  <div class="card-body">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ProjectTitle" class="control-label">Project Title :</label>
+                    <input asp-for="ProjectTitle" class="form-control" placeholder="Enter Project Title"/>
+                    <span asp-validation-for="ProjectTitle" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ProjectBody" class="control-label">Add Your Project Details :</label>
+                    <textarea id="ProjectBody" name="ProjectBody" rows="4" cols="50" class="form-control" placeholder="Enter Project Details"></textarea>
+                    <span asp-validation-for="ProjectBody" class="text-danger"></span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label asp-for="UploadDocument" class="control-label">Upload Images : </label>
+                            <input asp-for="UploadDocument" multiple="multiple" type="file" id="ChooseImg" name="imageFile" class="form-control" required />
+
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://placehold.jp/150*150.png" class="showimg" alt="Image" id="PrevImg" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label asp-for="UploadFile" class="control-label">Upload Files :</label>
+                            <input asp-for="UploadFile" multiple="multiple" type="file" name="pdfFile" class="form-control" required />
+
+                       </div>
+                    </div>
+                </div>
+
+
+                @* <div class="row">
+                <div class="form-group">
+                <label asp-for="UploadDocument" class="control-label"></label>
+                <input asp-for="UploadDocument" multiple="multiple" type="file" id="ChooseImg" name="imageFile" class="form-control" required />
+
+                <div class="col-1"></div>
+                <div class="col-3">
+                <img src="https://placehold.jp/150*150.png" class="showimg" alt="Image" id="PrevImg" />
+                </div>
+                </div>
+                </div>*@
+
+                <div class="form-group">
+                   
+                    <label asp-for="Tags" class="control-label">Add Topic To Your Project (Seperated by Comma(,))</label>
+                    <input asp-for="Tags" class="form-control" />
+                    <span asp-validation-for="Tags" class="text-danger"></span>
+                    
+                </div>
+                @*   <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+                </div>*@
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+
+        $(document).ready(function () {
+            $("#ChooseImg").change(function (e) {
+                debugger
+                var url = $("#ChooseImg").val();
+                var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+                if (ChooseImg.files && ChooseImg.files[0] && (ext == "gif" || ext == "jpeg" || ext == "jpg" || ext == "png" || ext == "bmp")) {
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var output = document.getElementById("PrevImg");
+                        output.src = reader.result;
+                    }
+                    reader.readAsDataURL(e.target.files[0]);
+                }
+            });
+        });
+
+
+    </script>
+}

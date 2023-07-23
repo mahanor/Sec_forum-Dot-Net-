@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Sec_Forum.Models.TblOrganizationDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<br />
+<div class="row">
+    <div class="col-md-10"><h5><i class="fa fa-chevron-left"></i>&nbsp;State Election Commission Office Details</h5></div>
+    <div class="col-md-2">
+        <a asp-action="Create" class="btn btn-primary">Add Details</a>
+    </div>
+</div>
+
+<br />
+<br />
+
+
+<form>
+
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <img src="~/images/indiamap.png" height="300px" width="300px">
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Office Details:</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="officeAddress"><b>Office Address :</b></label><br>
+                                <span id="officeAddress">@Html.DisplayFor(modelItem => item.OfficeAddress)</span><br>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="email"><b>Email ID : </b>:</label><br>
+                                <span id="email">@Html.DisplayFor(modelItem => item.EmailId)</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="phone"><b>Phone Number :</b></label><br>
+                                <span id="phone">@Html.DisplayFor(modelItem => item.PhoneNo)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+            <br /><br /><br>
+        </div>
+
+        <br />
+
+        <br />
+        <hr />
+    }
+
+
+
+
+</form>
+
+
+
+@*<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.SeqId)
+            <th>
+                @Html.DisplayNameFor(model => model.OrgName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgCode)
+            </th>
+<th>
+    @Html.DisplayNameFor(model => model.FieldName)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.OfficeAddress)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.EmailId)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.PhoneNo)
+</th>
+
+<th>
+    @Html.DisplayNameFor(model => model.State)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.District)
+</th>
+
+<th></th>
+        </tr>
+    </thead>
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+        @Html.DisplayFor(modelItem => item.SeqId)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgName)
+            </td>
+            @* <td>
+        @Html.DisplayFor(modelItem => item.OrgCode)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FieldName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            @*  <td>
+        @Html.DisplayFor(modelItem => item.RoleId)
+        </td>
+        <td>
+        @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.District)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
+            </th>
+</table>*@

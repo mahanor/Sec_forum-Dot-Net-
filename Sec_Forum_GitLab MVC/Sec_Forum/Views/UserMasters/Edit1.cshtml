@@ -1,0 +1,170 @@
+﻿@model Sec_Forum.Models.TblUserMaster
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-right.css' rel='stylesheet'>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #3863F4;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #3863F4;
+        }
+
+    /* Style the container/contact section */
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+        float: left;
+        width: 40%;
+        margin-top: 6px;
+        padding: 20px;
+    }
+
+    .column1 {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+</style>
+
+
+<h6>
+    <i class="fa fa-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;S.E.C Profile&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;Commissioner
+</h6>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <img src="~/images/Group 135.png" height="300px" width="300px">
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Designation" class="control-label"></label>
+                <input asp-for="Designation" class="form-control" />
+                <span asp-validation-for="Designation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfBirth" class="control-label"></label>
+                        <input asp-for="DateOfBirth" class="form-control" />
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+            </div>
+            @*            <div class="form-group">
+            <label asp-for="LastName" class="control-label"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="EducationalQualification" class="control-label"></label>
+                        <input asp-for="EducationalQualification" class="form-control" />
+                        <span asp-validation-for="EducationalQualification" class="text-danger"></span>
+            </div>
+                  @*  <div class="form-group">
+                        <label asp-for="LanguageKnown" class="control-label"></label>
+                        <input asp-for="LanguageKnown" class="form-control" />
+                        <span asp-validation-for="LanguageKnown" class="text-danger"></span>
+                    </div>*@
+
+                    <h6>Historical Summary :Past State Commissioners</h6>
+                    <table>
+                        <tr>
+                            <td>
+Name
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+            @* <div class="form-group">
+            <label asp-for="ProfileImage" class="control-label"></label>
+            @Html.LabelFor(model => model.ProfileImage, new { @class = "control-label col-md-2" })
+            <input type="file" name="image" onchange="previewFile()" onload="loadFile()"><br>
+
+            <img src=model.ProfileImage height="100">
+
+            <span asp-validation-for="ProfileImage" class="text-danger"></span>
+            <script>
+            function previewFile() {
+            var preview = document.querySelector('images');
+            var file = document.querySelector('input[type=file]').files[0];
+            var reader = new FileReader();
+
+            reader.addEventListener("load", function () {
+            preview.src = reader.result;
+            }, false);
+
+            if (file) {
+            reader.readAsDataURL(file);
+            }
+            }
+
+            </script>
+            @Html.ValidationMessageFor(model => model.ProfileImage)
+            @Html.HiddenFor(model => model.ProfileImage)
+            </div>*@
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Upload Details" class="btn btn-primary" />
+            </div>
+        </form>
+        </
+    </div>
+</div>
+    </div>
+</div>
+@*<div>
+    <a asp-action="Index" style="background-color:#3863F4">Back to List</a>
+</div>*@
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

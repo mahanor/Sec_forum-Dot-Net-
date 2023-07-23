@@ -1,0 +1,275 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    @*    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sec_Forum.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @*   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sec_Forum.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* CSS for the menu */
+        body {
+            font-family: "Open Sans", arial;
+            background: #467BED;
+            background: #fff;
+            background: #fff;
+            background: #fff;
+        }
+        .menu {
+            width: 200px;
+            height: 100vh;
+            background-color: #467BED;
+            color: #fff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: all 0.3s ease;
+        }
+
+            .menu.hidden {
+                transform: translateX(-200px);
+            }
+
+            .menu ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 20px 0;
+                color: white
+            }
+
+                .menu ul li {
+                    padding: 10px;
+                    cursor: pointer;
+                    color: white;
+                }
+
+                    .menu ul li:hover {
+                        background-color: #3863F4;
+                        color: white;
+                    }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        /* CSS for the menu hide/show button */
+        .menu-toggle {
+            position: fixed;
+            left: 210px;
+            top: 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            .menu-toggle:hover {
+                background-color: #555;
+            }
+
+        /* CSS for submenus */
+        .submenu {
+            display: none;
+        }
+
+        .menu ul li.has-submenu::before {
+            content: '+';
+            float: right;
+            margin-right: 5px;
+        }
+
+        .menu ul li.has-submenu.open::before {
+            content: '-';
+        }
+
+        .menu ul li.has-submenu.open {
+            background-color: #3863F4;
+        }
+
+        .submenu li {
+            padding-left: 20px;
+            color: white;
+        }
+
+            .submenu li:hover {
+                background-color: #3863F4;
+                color: white;
+            }
+        /* Add any additional styles you want for the input field here */
+       
+    </style>
+    <style>
+        .input-group {
+            position: relative;
+            display: flex;
+        }
+
+        .fa-search {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            pointer-events: none; /* This line is important to ensure the icon doesn't interfere with input */
+        }
+
+        /* Add any additional styles you want for the input field here */
+        .form-control {
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu -->
+    @{
+
+        var Designation = Context.Session.GetString("Designation");
+        var Username = Context.Session.GetString("Username");
+        var ProfileImage = Context.Session.GetString("ProfileImage");
+    }
+    <br />
+    <div class="menu">
+        <div class="text-left" style="margin-left:10px">
+            <br />
+            <img src="@ProfileImage" style="border-radius:50%; height:40px; width:40px"  />
+            <br />
+            <h6> @Username</h6>
+            <h6> @Designation</h6>
+        </div>
+        <br />
+        <ul>
+            <a asp-action="HomePage" asp-controller="HomePage">
+               
+            <li> <i class="fa fa-home fa-lg" style="color:white;height:15px;width:15px"></i>&nbsp;&nbsp;Home</li>
+            </a>
+            <a asp-action="Edit" asp-controller="UserMasters"  method="get">
+               
+            <li><i class=" far fa fa-user-circle" style="color:white;height:15px;width:15px"></i> &nbsp;&nbsp;My Profile</li>
+            </a>
+
+            <li class="has-submenu">
+              <i class="fa fa-user fa-lg" style="color:white;height:15px;width:15px"></i>&nbsp;&nbsp;
+                S.E.C Profile
+                <ul class="submenu">
+                    <a asp-action="EditCommissioner" asp-controller="UserMasters" asp-route-id=5 method="get">
+
+                    <li>Commissioner</li>  </a>
+                    <a asp-action="EditSecretory" asp-controller="UserMasters" asp-route-id=7 method="get">
+
+                    <li>Secretory</li>
+                    </a>
+                    <a asp-action="EditDeputyCommissioner" asp-controller="UserMasters" asp-route-id=6 method="get">
+
+                    <li>Deputy Commissioner</li>
+                    </a>
+
+                    @{
+                        Username = "Abhinav";
+                    }
+                    @if (User.Identity.Name == Username)
+                    {
+                        <a asp-action="AddSecProfile" asp-controller="UserMasters" method="post">
+
+                        <li>Add SEC Profile</li>
+                        </a>
+                    }
+                    
+                </ul>
+            </li>
+            <a asp-action="Index" asp-controller="TblAddPostDetails">
+            <li> <b><i class="fa fa-folder" style="color:white;height:15px;width:15px"></i></b>&nbsp;&nbsp;My Shared Data</li>
+            </a>
+            <a asp-action="Index" asp-controller="OrganizationDetails">
+            <li>  <b><i class="fa fa-folder" aria-hidden="true" style="color:white;height:15px;width:15px"></i> </b>&nbsp;&nbsp;S.E.C Details</li>
+            </a>
+            @{
+                Username = "Abhinav";
+            }
+
+            @if (User.Identity.Name == Username)
+            {
+                <a asp-action="Create" asp-controller="UserMasters">
+                <li enabled>
+                    <b><i class="fa fa-user-plus" aria-hidden="true" style="color:white;height:15px;width:15px" enabled></i></b>&nbsp;&nbsp;Register Profile
+                </li>
+                </a>
+            }
+            <a asp-controller="UserMasters" asp-action="Out">
+            <li>  <b><i class="fa fa-sign-out" style="color:white;height:15px;width:15px"></i> </b>&nbsp;&nbsp;LogOut</li>
+            </a>
+           
+        </ul>
+      
+         
+        
+    </div>
+
+
+
+    <!-- Content -->
+    <div class="container">
+        <main role="main" class="pb-3" style="margin-left:230px">
+            <div class="col-md-1"></div>
+            <div class=" col-md-8">
+         
+            </div>
+            @RenderBody()
+         
+        </main>
+    </div>
+
+    <!-- JavaScript to toggle the menu and submenus -->
+    <script>
+        // const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        const submenuItems = document.querySelectorAll('.has-submenu');
+
+        //menuToggle.addEventListener('click', function () {
+        //    menu.classList.toggle('hidden');
+        //});
+
+        submenuItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                this.classList.toggle('open');
+                const submenu = this.querySelector('.submenu');
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    @* <footer class="border-top footer text-muted">
+    @* <div class="container">
+    &copy; 2023 - Sec_Forum - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>*@
+    @*    </footer>*@
+    @*    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @* @await RenderSectionAsync("Scripts", required: false)*@
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            @*  &copy; 2023 - Sec_Forum - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+        </div>
+    </footer>    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

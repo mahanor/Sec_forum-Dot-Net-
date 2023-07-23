@@ -1,0 +1,197 @@
+﻿@model Sec_Forum.Models.TblUserMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<br />
+
+<h4 style="padding-top:20px">< Register Profile</h4>
+<hr />
+
+<div class="card col-md-12" style=" background-color:#F5F5F5;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8" style="margin-left:120px">
+                <form asp-action="Create" asp-controller="UserMasters" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label">Full Name :</label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter Name" style="width:600px" required />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    @*     <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>*@
+                    <div class="form-group" >
+                        <label asp-for="MobileNumber" class="control-label">Mobile Number :</label>
+                        <input asp-for="MobileNumber" class="form-control" placeholder="Enter Mobile Number" style="width:600px" required onkeypress="return this.value.length<10" onkeydown="return (!(event.keyCode>=65) && event.keyCode!=32);" />
+                        <span asp-validation-for="MobileNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" >
+                        <label asp-for="Email" class="control-label">Email Id :</label>
+                        <input asp-for="Email" class="form-control" type="email" placeholder="Enter Email Id" style="width:600px" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Designation" class="control-label">Designation :</label>
+                        <input asp-for="Designation" class="form-control" placeholder="Enter Designation" style="width:600px" required />
+                        <span asp-validation-for="Designation" class="text-danger"></span>
+                    </div> 
+                    <div class="form-group" >
+                        <label asp-for="ProfileImage" class="control-label"> Profile Image :</label>
+                        <input asp-for="ProfileImage" type="file" id="ChooseImg" name="imageFile" class="form-control" required style="width:600px" required />
+                        <span asp-validation-for="ProfileImage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" >
+                        <label asp-for="Username" class="control-label">User Name :</label>
+                        <input asp-for="Username" class="form-control" id="username" name="Username" placeholder="Enter UserName" style="width:600px" required />
+                        <span id="username-message"></span>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label">Password :</label>
+                        <input asp-for="Password" type="password" id="Password" name="Password" class="form-control" placeholder="Enter Password" style="width:600px" required />
+                        <span id="password-message" style="color:red"></span>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="control-label">Confirm Password :</label>
+                        <input asp-for="ConfirmPassword" type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" placeholder="Enter Password" style="width:600px" required />
+                        <span id="confirmPassword-message" style="color:red"></span>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <br />
+                    <div class="form-group" style="margin:0px 200px">
+                        <input type="submit" value="Register Profile" class="btn btn-primary" />
+                    </div>
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <script>
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success!',
+                                text: '@TempData["SuccessMessage"].ToString()',
+                                confirmButtonText: 'Done'
+                            }).then(function () {
+                                window.location.href = '@Url.Action("Create")';
+                            });
+                        </script>
+                    }
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        //$(document).ready(function () {
+        //    $('form').on('submit', function (event) {
+        //        var password = $('#Password').val();
+        //        var confirm_password = $('#ConfirmPassword').val();
+
+        //        if (password != confirm_password) {
+        //            alert('Password and confirm password do not match.');
+        //            event.preventDefault();
+        //        }
+        //    });
+        //});
+
+        $(".toggle-password").click(function () {
+            var passwordInput = $("#Password");
+            var passwordInputType = passwordInput.attr("type");
+            if (passwordInputType === "password") {
+                passwordInput.attr("type", "text");
+                $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+            } else {
+                passwordInput.attr("type", "password");
+                $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+            }
+        });
+
+        $(".toggle-password").click(function () {
+            var passwordInput = $("#ConfirmPassword");
+            var passwordInputType = passwordInput.attr("type");
+            if (passwordInputType === "password") {
+                passwordInput.attr("type", "text");
+                $(this).removeClass("fa-eye-slash").addClass("fa-eye");
+            } else {
+                passwordInput.attr("type", "password");
+                $(this).removeClass("fa-eye").addClass("fa-eye-slash");
+            }
+        });
+
+        $('#username').on('keyup', function () {
+            var username = $(this).val();
+            $.ajax({
+                url: '@Url.Action("CheckUsername", "UserMasters")',
+                type: 'POST',
+                data: { username: username },
+                success: function (result) {
+                    if (!result) {
+                        $('#username-message').html('<span style="color:red">Username is already taken, please choose a different one.<span>');
+                        $('#submit').prop('disabled', true);
+                    } else {
+                        $('#username-message').empty();
+                        $('#submit').prop('disabled', false);
+                    }
+                }
+            });
+        });
+
+        $('#Password').on('keyup', function () {
+        var password = $(this).val();
+            //var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#\$%\^&\*@@])(?=.{8,16})/;
+        var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#\$%\^&\*@@])[A-Za-z0-9!#\$%\^&\*@@]{8,16}$/;
+        if (!strongRegex.test(password)) {
+            $('#password-message').html('At least one uppercase letter, lowercase letter, number, special character, min 8 & max 16 characters long.');
+                $('#Password').addClass('highlight');
+                //$('#submit').prop('disabled', true);
+        } else {
+            $('#password-message').empty();
+                $('#Password').removeClass('highlight');
+                //$('#submit').prop('disabled', false);
+        }
+    });
+
+     $('form').submit(function() {
+            var password = $('#Password').val();
+            var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#\$%\^&\*@@])[A-Za-z0-9!#\$%\^&\*@@]{8,16}$/;
+        if (!strongRegex.test(password)) {
+                $('#password-message').html('At least one uppercase letter, lowercase letter, number, special character, min 8 & max 16 characters long.');
+                $('#Password').addClass('highlight').focus();
+            return false;
+        }
+    });
+
+        var password = document.getElementById("Password");
+        var confirmPassword = document.getElementById("ConfirmPassword");
+        var message = document.getElementById("confirmPassword-message");
+
+        confirmPassword.addEventListener("keyup", function () {
+            if (password.value !== confirmPassword.value) {
+                $('#ConfirmPassword').addClass('highlight');
+                $('#confirmPassword-message').html('Passwords do not match.');
+            } else {
+                $('#ConfirmPassword').removeClass('highlight');
+                $('#confirmPassword-message').empty();
+            }
+        });
+
+        $('#submit').on('click', function () {
+            var confirmPassword = $('#ConfirmPassword').val();
+            if ($('#confirmPassword-message').text().trim() !== '') {
+                $('#ConfirmPassword').addClass('highlight').focus();
+                return false;
+            }else{
+                $('#ConfirmPassword').removeClass('highlight');
+            }
+        });
+</script>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

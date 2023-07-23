@@ -1,0 +1,234 @@
+﻿@model IEnumerable<Sec_Forum.Models.ResultModel>
+
+@{
+    ViewData["Title"] = "Add Post";
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html>
+
+<style>
+    .project-details {
+        display: flex;
+    }
+
+    .profile-image {
+        height: 50px;
+        width: 80px;
+    }
+
+    .project-content {
+        margin-left: 10px;
+    }
+
+    .project-title {
+        margin-bottom: 0;
+    }
+
+    .designation {
+        color: #888;
+    }
+
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    .comment {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+
+        .comment p {
+            margin-bottom: 5px;
+        }
+
+    .reply-form {
+        margin-top: 10px;
+    }
+
+
+    .createdDate {
+        font-size: smaller;
+        color: gray;
+    }
+</style>
+<br />
+<div class="row">
+   @* <div class=" col-md-8">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-icon" id="searchInput" style="border-radius:0px">
+                <i class="fa fa-search"></i>
+            </div>
+        </form>
+    </div>*@
+
+    <div class=" col-md-8">
+
+        <form method="get" action="@Url.Action("IndexPage") ">
+            <div class="input-group">
+                <input type="text" class="form-control" name="searchString" placeholder="Search" aria-label="Search" aria-describedby="search-icon" id="searchInput" style="border-radius:0px">
+                <i class="fa fa-search"></i>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+        <form asp-action="Create" method="post" style="text-align:right">
+            <button class="btn btn-primary text-center">Add Post <i class="fa fa-plus"></i></button>
+        </form>
+    </div>
+</div>
+
+@*<div>
+    <form method="get" action="@Url.Action("Index")">
+        <input type="text" name="searchString" placeholder="Search..." style="width: 300px;" />
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<form asp-action="Create" method="post" style="text-align:right">
+    <button class="btn  text-center">Add New <i class="fa fa-plus"></i></button>
+</form>
+*@
+
+@*<div style="float: right; margin-left: 10px;">
+    <form method="get" action="@Url.Action("Index")">
+        <div>
+            <label for="sortFilter">Sort by:</label>
+            <select id="sortFilter" name="sortFilter">
+                <option value="Date">Date</option>
+            </select>
+            <button type="submit">Apply</button>
+        </div>
+    </form>
+</div>*@
+
+<div style="clear: both;"></div>
+
+<br />
+<br />
+
+<h4><i class="fa fa-chevron-left"></i>&nbsp;<b>Recent Projects</b></h4>
+<br />
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="project col-lg-12">
+          <!-- Project details -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="project-details">
+                        <div>
+                            <img src="@item.ProfileImage" class="profile-image" style="border-radius:40%" />
+                        </div>
+                        <div class="project-content">
+
+                            <h4 class="project-title" style="font-size:17px">@item.Name <span class="createdDate">@item.CreatedDate.ToString("MMMM dd, yyyy")</span> </h4>
+                            @*<h4>@item.CreatedDate</h4>*@
+                            <span class="designation">@item.Designation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <span class="designation">@item.ProjectTitle</span>
+                    </div><br>
+                    <div>
+                        <p>
+                            @if (item.ProjectBody.Length > 50)
+                            {
+                                <span>@item.ProjectBody</span>
+                                @*<a href="@Url.Action("Index", new { id = item })">...Read More</a>*@
+                                <br /><br />
+                                string data = @item.Tags;
+                                string[] tags = data.Split(',');
+
+                                foreach (string tag in tags)
+                                {
+
+                                    string separatedTag = tag;
+
+
+                                    <span class="Tags" style="background:#D3D3D3;color:black;border-radius: 25px;font-size:15px;padding:5px 10px;">@tag</span>
+                                }
+                            }
+                            else
+                            {
+                                <span>@item.ProjectBody</span>
+                            }
+                        </p>
+
+                    </div>
+                    <div><strong>Other Projects</strong> </div><br>
+                    <div>
+                        @if (!string.IsNullOrEmpty(@item.UploadDocument)) // this condition is given for solve document is null error
+                        {
+                            string documents = @item.UploadDocument;
+                            string[] uploads = documents.Split(',');
+
+                            foreach (string upload in uploads)
+                            {
+                                string separateddocuments = upload;
+                                <span class="upload-image" style="font-size:15px;padding:5px 10px;"> <img src="@upload" class="profile-image" /></span>
+                            }
+                        }
+                    </div>
+             @*       <div>
+                        <span class="Tags">@item.Tags</span>
+                    </div>*@
+                </div>
+               
+                <br>
+            </div>
+          @*  <div class="row">
+                <a href="@Url.Action("DownloadPdf", "TblAddPostDetails")">
+                    <input type="hidden" name="userid" value="@item.UploadFile" />
+                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    Download PDF
+                </a>
+                <form class="reply-form" method="post" action="@Url.Action("DownloadPdf")">
+                    <input type="hidden" name="commentId" value="@item.UploadFile" />
+                    <button type="submit" class="btn btn-primary">download</button>
+                </form>
+            </div>*@
+            <hr>
+            <br>
+        </div>
+
+    </div>
+}
+
+
+<div class="container">
+    <div class="align-content-center">
+        @if (ViewBag.TotalPages > 1)
+        {
+            <div class="pagination">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = ViewBag.CurrentPage - 1 })" class="page-link">Previous</a>
+
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = i })" class="page-link @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+
+                }
+
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = ViewBag.CurrentPage + 1 })" class="page-link">Next</a>
+
+                }
+            </div>
+        }
+    </div>
+</div>

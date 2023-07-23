@@ -1,0 +1,230 @@
+﻿@model IEnumerable<Sec_Forum.Models.ResultModel>
+
+@{
+    ViewData["Title"] = "Homepage";
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html>
+
+<style>
+    .project-details {
+        display: flex;
+    }
+
+    .profile-image {
+        height: 50px;
+        width: 80px;
+    }
+
+    .project-content {
+        margin-left: 10px;
+    }
+
+    .project-title {
+        margin-bottom: 0;
+    }
+
+    .designation {
+        color: #888;
+    }
+
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    .comment {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+
+        .comment p {
+            margin-bottom: 5px;
+        }
+
+    .reply-form {
+        margin-top: 10px;
+    }
+
+
+    .createdDate {
+        font-size: smaller;
+        color: gray;
+    }
+
+    select {
+        width: 200px; /* Set the width of the dropdown */
+        padding: 5px; /* Add some padding to the dropdown */
+        font-size: 16px; /* Set the font size */
+    }
+
+</style>
+
+<br />
+<div class="row">
+    <div class=" col-md-8">
+
+        <form method="get" action="@Url.Action("HomePage")">
+            <div class="input-group">
+                <input type="text" class="form-control" name="searchString" placeholder="Search" aria-label="Search" aria-describedby="search-icon" id="searchInput" style="border-radius:0px">
+                <i class="fa fa-search"></i>
+            </div>
+        </form>
+
+    </div>
+    <div class="col-md-1"></div>
+
+  
+
+    <div class="col-md-3">
+        <form method="get" action="@Url.Action("HomePage")" id="sortForm">
+            <select name="sortFilter" id="sortFilter" style="background-color: white; border-radius:10px">
+                <option value="option1">Sort by: Featured</option>
+                <option value="option2">Date</option>
+                <option value="option3">Name</option>
+            </select>
+
+        </form>
+    </div>
+
+    <script>
+        // Get the sortFilter dropdown element
+        var sortFilterDropdown = document.getElementById("sortFilter");
+
+        // Add an event listener to detect changes in the dropdown value
+        sortFilterDropdown.addEventListener("change", function () {
+            // Check if the selected value is "option2" (Date)
+            if (sortFilterDropdown.value === "option2") {
+                // Trigger the form submission
+                document.getElementById("sortForm").submit();
+            }
+        });
+    </script>
+
+     
+
+    
+
+
+
+
+</div>
+
+
+<div style="clear: both;"></div>
+
+<br />
+<br />
+
+<h4><i class="fa fa-chevron-left"></i>&nbsp;<b>Recent Projects</b></h4>
+<br />
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="project col-lg-12">
+            <!-- Project details -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="project-details">
+                        <div>
+                            <img src="@item.ProfileImage" class="profile-image" style="border-radius:50%" />
+                        </div>
+                        <div class="project-content">
+
+                            <h4 class="project-title" style="font-size:17px">@item.Name <span class="createdDate">@item.CreatedDate.ToString("MMMM dd, yyyy")</span> </h4>
+
+                            <span class="designation">@item.Designation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-10">
+                    <div>
+                        <h5><span><b>@item.ProjectTitle</b></span></h5>
+                    </div>
+                    <br/>
+                    <div>
+                        <p>
+                            @if (item.ProjectBody.Length > 40)
+                            {
+                                <span>@(item.ProjectBody.Length > 250 ? item.ProjectBody.Substring(0, 250) : item.ProjectBody)</span>
+
+                                <a href="@Url.Action("Index", new { id = item.tblpostid})">...Read More</a>
+                                <br />
+                                <br />
+
+                                string data = @item.Tags;
+                                string[] tags = data.Split(',');
+
+                                foreach (string tag in tags)
+                                {
+
+                                    string separatedTag = tag;
+
+
+                                    <span class="Tags" style="background:#D3D3D3;color:black;border-radius: 25px;font-size:15px;padding:5px 10px;">@tag</span>
+                                }
+
+                            }
+                            else
+                            {
+                                <span>@item.ProjectBody</span>
+                            }
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="col-md-2">
+                    @if (!string.IsNullOrEmpty(@item.UploadDocument)) // this condition is given for solve document is null error
+                    {
+                        string documents = @item.UploadDocument;
+                        string[] uploads = documents.Split(',');
+
+
+                        string separateddocuments = uploads[0];
+                        <span> <img src="@separateddocuments" style="height:150px; width:120px"></span>
+
+                    }
+
+                </div>
+                <br>
+            </div>
+            <hr>
+            <br>
+        </div>
+
+    </div>
+}
+
+<div class="container" >
+    <div class="align-content-center">
+    @if (ViewBag.TotalPages > 1)
+    {
+        <div class="pagination">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = ViewBag.CurrentPage - 1 })" class="page-link">Previous</a>
+
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = i })" class="page-link @(i == ViewBag.CurrentPage ? "active" : "")">@i</a>
+
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="@Url.Action("HomePage", new { searchString = Context.Request.Query["searchString"], sortFilter = Context.Request.Query["sortFilter"], page = ViewBag.CurrentPage + 1 })" class="page-link">Next</a>
+
+            }
+        </div>
+    }
+    </div>
+</div>
+
+

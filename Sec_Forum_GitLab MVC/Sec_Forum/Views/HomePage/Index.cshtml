@@ -1,0 +1,345 @@
+﻿@model IEnumerable<Sec_Forum.Models.ResultModel>
+@using System.IO
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html>
+
+<style>
+    .project-details {
+        display: flex;
+    }
+
+    .profile-image {
+        height: 50px;
+        width: 50px;
+    }
+    .Project-image{
+        height: 80px;
+        width:60px;
+    }
+
+    .project-content {
+        margin-left: 10px;
+    }
+
+    .project-title {
+        margin-bottom: 0;
+    }
+
+    .designation {
+        color: #888;
+    }
+
+    .reply-box {
+        display: none;
+    }
+
+    .comments-section {
+        margin-top: 20px;
+    }
+
+    .comment {
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f5f5f5;
+    }
+
+        .comment p {
+            margin-bottom: 5px;
+        }
+
+    .reply-form {
+        margin-top: 10px;
+    }
+
+
+    .createdDate {
+        font-size: smaller;
+        color: gray;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".comment-link").click(function () {
+            var commentBox = $(this).closest('.project').find('.comment-box');
+            commentBox.toggle();
+        });
+
+        $(".reply-link").click(function () {
+            var replyBox = $(this).closest('.comment').find('.reply-box');
+            replyBox.toggle();
+        });
+    });
+</script>
+
+<div style="clear: both;"></div>
+
+<br />
+<br />
+
+<h4>
+    < Recent Projects
+</h4>
+<br />
+
+@foreach (var item in Model)
+{
+    <div class="project">
+        <!-- Project details -->
+        <div class="project-details">
+            <div>
+                <img src="@item.ProfileImage" class="profile-image" style="border-radius:50%" />
+            </div>
+            <div class="project-content">
+                <h4 class="project-title" style="font-size:17px">@item.Name <span class="createdDate">@item.CreatedDate.ToString("MMMM dd, yyyy")</span> </h4>
+                @*<h4>@item.CreatedDate</h4>*@
+                <span class="designation">@item.Designation</span><br /><br />
+            </div>
+        </div>
+
+        <div>
+            <span @*class="designation"*@ style="text-align:justify"><strong>@item.ProjectTitle</strong></span>
+        </div><br>
+        <p>@item.ProjectBody</p>
+        <div>
+
+            @{
+                string data = @item.Tags;
+                string[] tags = data.Split(',');
+
+                foreach (string tag in tags)
+                {
+
+                    string separatedTag = tag;
+
+
+                    <span class="Tags" style="background:#D3D3D3;color:black;border-radius: 25px;font-size:15px;padding:5px 10px;">@tag</span>
+                }
+            }
+
+        </div>
+        <br />
+
+        @*<span><strong>other projects</strong></span>*@
+        <div><strong>Other Projects</strong> </div><br>
+
+       <div>
+    @if (!string.IsNullOrEmpty(@item.UploadDocument)) // this condition is given to solve the document is null error
+    {
+        string documents = @item.UploadDocument;
+        string[] uploads = documents.Split(',');
+
+        foreach (string upload in uploads)
+        {
+            string separateddocuments = upload;
+            <div style="display: inline-block; margin-right: 10px;">
+                <span class="upload-image" style="font-size:15px;padding:5px 10px;">
+                    <img src="@upload" class="Project-image" />
+                </span>
+                <div style="">
+                    <a href="@Url.Action("DownloadImage", new { fileName = System.IO.Path.GetFileName(upload) })">Download</a>
+                </div>
+            </div>
+        }
+    }
+    @if (!string.IsNullOrEmpty(@item.UploadFile))
+    {
+        string documents = @item.UploadFile;
+        string[] uploads = documents.Split(',');
+
+        foreach (string upload in uploads)
+        {
+            string separateddocuments = upload;
+            <div style="display: inline-block; margin-right: 10px;">
+                <span class="upload-image" style="font-size:15px;padding:5px 10px;">
+                            <img src="~/images/pdf.jpg" class="Project-image" />
+                </span>
+                <div>
+                    <a href="@Url.Action("DownloadFile", new { fileName = System.IO.Path.GetFileName(upload) })">Download</a>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+
+
+        <br />
+
+        @* <div>
+    @if (!string.IsNullOrEmpty(@item.UploadFile)) // this condition is given for solve document is null error
+    {
+    string documents = @item.UploadFile;
+    string[] uploads = documents.Split(',');
+
+    foreach (string upload in uploads)
+    {
+    string separateddocuments = upload;
+    <span class="upload-image" style="font-size:15px;padding:5px 10px;"> <img src="@upload" class="profile-image" /></span>
+    }
+    }
+    </div>*@
+
+
+        <div>
+           
+        </div>
+
+
+        @*
+    <div>
+    @if (!string.IsNullOrEmpty(@item.UploadFile))
+    {
+    string documents = @item.UploadFile;
+    string[] uploads = documents.Split(',');
+
+    foreach (string upload in uploads)
+    {
+    string separateddocuments = upload;
+    string fileName = Path.GetFileName(upload);
+    if (Path.GetExtension(fileName).Equals(".pdf", StringComparison.OrdinalIgnoreCase))
+    {
+    <span class="upload-image" style="font-size:15px;padding:5px 10px;">
+    <img src="@upload" class="profile-image" />
+    <a href="@Url.Action("DownloadFile", new { fileName })">Download</a>
+    </span>
+    }
+    }
+    }
+    </div>*@
+
+
+
+
+
+        <br />
+        <i style="font-size:18px;color:gray" class="fa fa-thumbs-up pointer">Like</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa fa-thumbs-down pointer" style="font-size:18px;color:gray" aria-hidden="true">Dislike</i>
+        <br />        <br />
+
+        <br />
+
+
+        <div style="margin-left: 20px;" id="comment-box" style="display:none;" visible="false">
+            <form method="post" action="@Url.Action("AddComment")">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="hidden" name="postUid" value="@item.PostUid" />
+                        <textarea name="newComment" class="form-control" placeholder="Enter your comment"></textarea>
+                    </div>
+                    <div class="col-md-2">
+                        <br /><button type="submit" class="btn btn-primary">Comment</button>
+                    </div>
+                </div>
+
+                @* <input type="hidden" name="userid" value="@item.UId" />*@
+            </form>
+        </div>
+        <div class="comments-section">
+
+            <h4>Disscussion Forum:</h4><br>
+            @foreach (var comment in item.Comments)
+            {
+                @if (!string.IsNullOrEmpty(comment.commentId))  // this condition apply for avoid black div
+                {
+                    <div class="comment">
+                        @* <p><strong>Name:</strong> @comment.Username</p>
+            <p><strong>Comment:</strong> @comment.CommentsText</p>*@
+
+
+
+                        <div class="project-details">
+                            <div>
+                                <img src="@comment.ProfileImage" class="profile-image" style="border-radius:50%" />
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title" style="font-size:17px">@comment.Name <span class="createdDate">@comment.CreatedDate.ToString("MMMM dd, yyyy")</span> </h4>
+
+                                <span class="designation">@comment.Designation</span><br /><br />
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="designation" style="text-align:justify">@comment.CommentsText</span>
+                        </div>
+                        <br>
+                        <i style="font-size:18px;color:gray" class="fa fa-thumbs-up pointer">Like</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a class="fa fa-comments  pointer reply-link" id="reply-link" style="font-size:18px;color:gray" aria-hidden="true">Reply</a>
+                        <br />
+
+                        <div>
+                            <form class="reply-form reply-box" id="reply-box" method="post" action="@Url.Action("AddReplys",new { id = item.tblpostid})">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <input type="hidden" name="commentId" value="@comment.commentId" />
+                                        <input type="hidden" name="postId" value="@item.PostUid" />
+                                        <input name="newReply" class="form-control" placeholder="Enter your reply"></input>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn btn-primary">Reply</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <br />
+                    <div class="replies-section ">
+
+                        @foreach (var reply in comment.Replies)
+                        {
+
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-1 comment">
+                                    <div class="project-details">
+                                        <img src="@reply.ProfileImage" class="profile-image" style="border-radius:50%" />
+                                    </div>
+                                </div>
+                                <div class="col-md-10 comment">
+                                    <div class="project-content">
+                                        <h4 class="project-title" style="font-size:17px">@reply.Name <span class="createdDate">@reply.CreatedDate.ToString("MMMM dd, yyyy")</span> </h4>
+
+                                        <span class="designation">@reply.Designation</span><br /><br />
+                                    </div>
+                                    <div class="reply">
+                                        <p> @reply.ReplyText</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        }
+
+
+                    </div>
+
+                    <br />
+
+
+
+
+                }
+                <hr>
+            }
+
+        </div>
+
+    </div>
+    <br />
+
+    <br />
+}

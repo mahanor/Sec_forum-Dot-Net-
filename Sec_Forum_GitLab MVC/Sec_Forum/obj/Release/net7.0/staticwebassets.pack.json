@@ -1,0 +1,461 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\Sec_Forum.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Sec_Forum.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\american-express.png",
+      "PackagePath": "staticwebassets\\credit\\american-express.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\cirrus.png",
+      "PackagePath": "staticwebassets\\credit\\cirrus.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\mastercard.png",
+      "PackagePath": "staticwebassets\\credit\\mastercard.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\paypal.png",
+      "PackagePath": "staticwebassets\\credit\\paypal.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\paypal2.png",
+      "PackagePath": "staticwebassets\\credit\\paypal2.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\credit\\visa.png",
+      "PackagePath": "staticwebassets\\credit\\visa.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\files\\Dada Sutar_Maintenance Trainee. (1).pdf",
+      "PackagePath": "staticwebassets\\files\\Dada Sutar_Maintenance Trainee. (1).pdf"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\files\\Dada Sutar_Maintenance Trainee..pdf",
+      "PackagePath": "staticwebassets\\files\\Dada Sutar_Maintenance Trainee..pdf"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\07dded53-083f-4530-a97f-9ebfceeb069c.jpg",
+      "PackagePath": "staticwebassets\\images\\07dded53-083f-4530-a97f-9ebfceeb069c.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\0bb39ae9-9c69-4801-bfd8-2d9b4175cf0e.png",
+      "PackagePath": "staticwebassets\\images\\0bb39ae9-9c69-4801-bfd8-2d9b4175cf0e.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\0ec3d7fa-6133-43fc-8478-f4ddce700a04.jpg",
+      "PackagePath": "staticwebassets\\images\\0ec3d7fa-6133-43fc-8478-f4ddce700a04.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\1cf5d60e-8ef2-401a-adfb-1d24b833f7ae.png",
+      "PackagePath": "staticwebassets\\images\\1cf5d60e-8ef2-401a-adfb-1d24b833f7ae.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\25d19610-af60-4aa2-99b8-2894502626a6.jpg",
+      "PackagePath": "staticwebassets\\images\\25d19610-af60-4aa2-99b8-2894502626a6.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\2cdf0051-995e-4ab0-a832-52df59ecfdd4.png",
+      "PackagePath": "staticwebassets\\images\\2cdf0051-995e-4ab0-a832-52df59ecfdd4.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\2fa89ea7-bdcf-4843-b466-e793219c7a4a.jpg",
+      "PackagePath": "staticwebassets\\images\\2fa89ea7-bdcf-4843-b466-e793219c7a4a.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr (1).jpg",
+      "PackagePath": "staticwebassets\\images\\360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr (1).jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\360e44bb-fdc2-4078-aed9-e57e1242fe05.pdf",
+      "PackagePath": "staticwebassets\\images\\360e44bb-fdc2-4078-aed9-e57e1242fe05.pdf"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\3968a40c-8ab4-4b1a-be72-53119e2d9897.png",
+      "PackagePath": "staticwebassets\\images\\3968a40c-8ab4-4b1a-be72-53119e2d9897.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\3b976813-cf66-4377-906e-045208063776.png",
+      "PackagePath": "staticwebassets\\images\\3b976813-cf66-4377-906e-045208063776.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\3da845eb-9c81-4a2a-abc4-698cc127e52c.jpg",
+      "PackagePath": "staticwebassets\\images\\3da845eb-9c81-4a2a-abc4-698cc127e52c.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\40f68aef-6204-40bc-b5ff-dcf56bd19af5.png",
+      "PackagePath": "staticwebassets\\images\\40f68aef-6204-40bc-b5ff-dcf56bd19af5.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\4a2af711-db12-4832-b96a-866b2a21892d.png",
+      "PackagePath": "staticwebassets\\images\\4a2af711-db12-4832-b96a-866b2a21892d.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\4b48468e-ec65-48f3-9948-4a5b3216a055.png",
+      "PackagePath": "staticwebassets\\images\\4b48468e-ec65-48f3-9948-4a5b3216a055.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\68f96d8e-ccfd-4c35-884b-7462466cbdd9.png",
+      "PackagePath": "staticwebassets\\images\\68f96d8e-ccfd-4c35-884b-7462466cbdd9.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\97280071-adf4-4f8d-988c-4774587cce61.pdf",
+      "PackagePath": "staticwebassets\\images\\97280071-adf4-4f8d-988c-4774587cce61.pdf"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\Group 135.png",
+      "PackagePath": "staticwebassets\\images\\Group 135.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM (1).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM (1).jpeg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM (2).jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM (2).jpeg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM.jpeg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2023-06-21 at 10.44.51 AM.jpeg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\WhatsApp Image 2023-07-03 at 19.26.36.jpg",
+      "PackagePath": "staticwebassets\\images\\WhatsApp Image 2023-07-03 at 19.26.36.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\a1fcc9c4-8b47-4aa1-89d5-e3bbbe414267.pdf",
+      "PackagePath": "staticwebassets\\images\\a1fcc9c4-8b47-4aa1-89d5-e3bbbe414267.pdf"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\b09a0360-248c-4479-8c89-3604d2f6f554.jpg",
+      "PackagePath": "staticwebassets\\images\\b09a0360-248c-4479-8c89-3604d2f6f554.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\ba345f4f-c46c-43ca-ae92-786c125844da.jpg",
+      "PackagePath": "staticwebassets\\images\\ba345f4f-c46c-43ca-ae92-786c125844da.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\c308080e-2d72-4b4e-b932-980f80b4bea6.png",
+      "PackagePath": "staticwebassets\\images\\c308080e-2d72-4b4e-b932-980f80b4bea6.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\ca1220f8-c710-4a1d-9355-4b09d16892e9.png",
+      "PackagePath": "staticwebassets\\images\\ca1220f8-c710-4a1d-9355-4b09d16892e9.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\dea334bd-f8a3-4da5-8529-1eff4b901ec6.png",
+      "PackagePath": "staticwebassets\\images\\dea334bd-f8a3-4da5-8529-1eff4b901ec6.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\deputycommssioner.jpg",
+      "PackagePath": "staticwebassets\\images\\deputycommssioner.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\download (1).png",
+      "PackagePath": "staticwebassets\\images\\download (1).png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\download (2).png",
+      "PackagePath": "staticwebassets\\images\\download (2).png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\download.jpg",
+      "PackagePath": "staticwebassets\\images\\download.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\download.png",
+      "PackagePath": "staticwebassets\\images\\download.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\e7be10b0-6d6b-48ed-9981-80959ce4e868.jpg",
+      "PackagePath": "staticwebassets\\images\\e7be10b0-6d6b-48ed-9981-80959ce4e868.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\electioncommssioner.jpg",
+      "PackagePath": "staticwebassets\\images\\electioncommssioner.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\f91d990d-3d08-49df-870a-06039567a565.jpg",
+      "PackagePath": "staticwebassets\\images\\f91d990d-3d08-49df-870a-06039567a565.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\images.jpg",
+      "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\imagesGroup 136.png.jpg",
+      "PackagePath": "staticwebassets\\images\\imagesGroup 136.png.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\indiamap.png",
+      "PackagePath": "staticwebassets\\images\\indiamap.png"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\pdf.jpg",
+      "PackagePath": "staticwebassets\\images\\pdf.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\profile-Icon-SVG23.jpg",
+      "PackagePath": "staticwebassets\\images\\profile-Icon-SVG23.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\profile4.webp",
+      "PackagePath": "staticwebassets\\images\\profile4.webp"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\images\\secretory.jpg",
+      "PackagePath": "staticwebassets\\images\\secretory.jpg"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Sec_Forum_GitLab\\Sec_Forum_GitLab\\Sec_Forum\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.Sec_Forum.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.build.Sec_Forum.props",
+      "PackagePath": "build\\Sec_Forum.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Sec_Forum.props",
+      "PackagePath": "buildMultiTargeting\\Sec_Forum.props"
+    },
+    {
+      "Id": "obj\\Release\\net7.0\\staticwebassets\\msbuild.buildTransitive.Sec_Forum.props",
+      "PackagePath": "buildTransitive\\Sec_Forum.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
